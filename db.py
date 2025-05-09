@@ -2,7 +2,7 @@ import sqlite3
 import os
 from datetime import datetime
 
-DB_PATH = os.path.join("data", "telegram.db")
+DB_PATH = os.path.join(os.path.dirname(__file__), "data", "telegram.db")
 
 def init_db():
     os.makedirs("data", exist_ok=True)

@@ -13,8 +13,9 @@ from telethon.tl.functions.messages import GetDiscussionMessageRequest
 
 from db import init_db, save_channel, save_posts
 
-CONFIG_PATH = "/home/vikart/chat_gpt_parcer/config.json"
-STATE_PATH = "/home/vikart/chat_gpt_parcer/data/state.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CONFIG_PATH = os.path.join(BASE_DIR, "config.json")
+STATE_PATH = os.path.join(BASE_DIR, "data", "state.json")
 
 with open(CONFIG_PATH, 'r') as f:
     config = json.load(f)
