@@ -22,7 +22,7 @@ with open(CONFIG_PATH, 'r') as f:
 
 api_id = config['api_id']
 api_hash = config['api_hash']
-session_name = config['session_name']
+session_name = os.path.join(BASE_DIR, config['session_name'])
 
 
 def load_state():
